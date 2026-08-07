@@ -1,10 +1,18 @@
-# PARA Second Brain Viz
+# PARA Second Brain Viz (PAVi)
 
 [English](README.md) | [한국어](README.ko.md)
 
-![PARA Second Brain Viz — Activity, Query Replay, and Ingest Replay](assets/hero-en.png)
+![PAVi — PARA Second Brain Viz](assets/hero-en.png)
 
-PARA Second Brain Viz is an Obsidian visual analytics plugin for an existing PARA vault: it maps the vault's current structure and, when knowledge-base tools such as PARA Knowledge Base provide privacy-safe query/build logs, turns them into replay, cost, reach, growth, and health insights. It does **not** build, rewrite, or query the knowledge base itself.
+PARA Second Brain Viz—nicknamed **PAVi**—is an Obsidian visual analytics plugin for an existing PARA vault: it maps the vault's current structure and, when knowledge-base tools such as PARA Knowledge Base provide privacy-safe query/build logs, turns them into replay, cost, reach, growth, and health insights. It does **not** build, rewrite, or query the knowledge base itself.
+
+PAVi is short for **PARA Analytics & Visualization**. Its mascot is a tiny neural firefly whose violet, blue, and mint nodes light up as the second brain is observed. The full product name stays explicit in manifests and documentation; PAVi is the friendly shorthand used in the graph UI and demos.
+
+<p align="center">
+  <img src="assets/pavi-avatar.png" width="260" alt="PAVi neural-firefly mascot and square thumbnail">
+</p>
+
+The square [PAVi thumbnail](assets/pavi-avatar.png) is included for posts, demos, and repository cards.
 
 The plugin auto-detects the portable **PARA Knowledge Base v1** contract when a vault contains `.para-kb/config.json`. LLM wiki PARA, standard PARA, and fully custom profiles remain available for independent and legacy setups.
 
@@ -99,9 +107,9 @@ The parser intentionally discards prompt text, query text, note bodies, and unkn
 
 ## Commands
 
-- **Open PARA Second Brain Viz graph**
-- **Open PARA Second Brain Viz metrics lab**
-- **Refresh PARA Second Brain Viz data**
+- **Open PAVi graph**
+- **Open PAVi metrics lab**
+- **Refresh PAVi data**
 - **Capture vault snapshot**
 - **Validate vault profile**
 - **Log lens availability report**

@@ -36,7 +36,7 @@ export class ObservatorySettingTab extends PluginSettingTab {
     const { containerEl } = this;
     containerEl.empty();
     containerEl.addClass("llm-observatory-settings");
-    new Setting(containerEl).setName("PARA Second Brain Viz").setHeading();
+    new Setting(containerEl).setName("PAVi · PARA Second Brain Viz").setHeading();
     containerEl.createEl("p", {
       cls: "setting-item-description",
       text: "Map a PARA vault and privacy-safe JSONL telemetry into structured graph overlays. The bundled LLM wiki profile matches this vault; presets and aliases make the same plugin portable."
@@ -44,7 +44,7 @@ export class ObservatorySettingTab extends PluginSettingTab {
 
     new Setting(containerEl)
       .setName("Default lens")
-      .setDesc("The lens selected when a new PARA Second Brain Viz metrics view opens.")
+      .setDesc("The lens selected when a new PAVi metrics view opens.")
       .addDropdown((dropdown) => {
         dropdown.addOptions(Object.fromEntries(
           OBSERVATORY_LENSES.map((lens) => [lens.id, `${lens.id} · ${lens.title}`])

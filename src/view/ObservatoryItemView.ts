@@ -86,7 +86,7 @@ export class ObservatoryItemView extends ItemView {
   }
 
   getDisplayText(): string {
-    return "PARA Second Brain Viz Metrics Lab";
+    return "PAVi Metrics Lab";
   }
 
   getIcon(): string {
@@ -167,7 +167,7 @@ export class ObservatoryItemView extends ItemView {
     const canvas = document.createElement("canvas");
     canvas.className = "llmwo-canvas";
     canvas.tabIndex = 0;
-    canvas.setAttribute("aria-label", "PARA Second Brain Viz Metrics Lab visual stage");
+    canvas.setAttribute("aria-label", "PAVi · PARA Second Brain Viz metrics stage");
     canvas.addEventListener("click", (event) => this.onCanvasClick(event));
     canvas.addEventListener("mousemove", (event) => this.onCanvasMove(event));
     canvas.addEventListener("mouseleave", () => this.onCanvasLeave());

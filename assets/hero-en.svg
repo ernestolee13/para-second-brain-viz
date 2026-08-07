@@ -32,9 +32,12 @@
       <circle cx="22" cy="20" r="6" fill="#7c6af2"/><circle cx="38" cy="20" r="6" fill="#62b6ff"/><circle cx="54" cy="20" r="6" fill="#3ed6a0"/>
       <text x="72" y="26" fill="#d8d9e7" font-size="16" font-weight="700" letter-spacing="1.2">OBSIDIAN · PARA</text>
     </g>
-    <text x="800" y="168" text-anchor="middle" fill="#f7f7fb" font-size="72" font-weight="800" letter-spacing="-2">PARA SECOND BRAIN VIZ</text>
-    <rect x="440" y="202" width="720" height="4" rx="2" fill="url(#line)"/>
-    <text x="800" y="255" text-anchor="middle" fill="#b8bccd" font-size="25" font-weight="500">Visual analytics for existing PARA vaults and logged query/build activity</text>
+    <circle cx="1380" cy="165" r="155" fill="#7c6af2" fill-opacity=".08" stroke="#62b6ff" stroke-opacity=".16"/>
+    <image href="pavi-mascot.png" x="1195" y="-12" width="360" height="360" preserveAspectRatio="xMidYMid meet"/>
+    <text x="800" y="106" text-anchor="middle" fill="#aeb3c6" font-size="18" font-weight="750" letter-spacing="3">PARA SECOND BRAIN VIZ</text>
+    <text x="800" y="196" text-anchor="middle" fill="#f7f7fb" font-size="104" font-weight="820" letter-spacing="-3">PAVi</text>
+    <rect x="560" y="218" width="480" height="4" rx="2" fill="url(#line)"/>
+    <text x="800" y="266" text-anchor="middle" fill="#b8bccd" font-size="23" font-weight="500">Visual analytics for existing PARA vaults and logged query/build activity</text>
 
     <g filter="url(#shadow)">
       <rect x="48" y="332" width="480" height="300" rx="24" fill="#11141d" stroke="#62b6ff" stroke-opacity=".45"/>

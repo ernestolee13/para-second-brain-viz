@@ -1,9 +1,9 @@
 {
   "id": "llm-wiki-observatory",
   "name": "PARA Second Brain Viz",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "minAppVersion": "1.12.0",
-  "description": "Visual analytics for existing PARA vault structure and privacy-safe query/build telemetry.",
+  "description": "PAVi visualizes existing PARA vault structure and privacy-safe query/build telemetry.",
   "author": "ErnestoLee",
   "authorUrl": "https://github.com/ernestolee13",
   "isDesktopOnly": true

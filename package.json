@@ -1,8 +1,8 @@
 {
   "name": "para-second-brain-viz",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "private": true,
-  "description": "Obsidian visual analytics for existing PARA vault structure and privacy-safe query/build telemetry.",
+  "description": "PAVi: Obsidian visual analytics for existing PARA vault structure and privacy-safe query/build telemetry.",
   "license": "MIT",
   "repository": {
     "type": "git",

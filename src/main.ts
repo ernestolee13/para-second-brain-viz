@@ -85,26 +85,26 @@ export default class LlmWikiObservatoryPlugin extends Plugin implements Observat
       (leaf: WorkspaceLeaf) => new ObservatoryItemView(leaf, this.services)
     );
 
-    this.addRibbonIcon("network", "Open PARA Second Brain Viz", () => {
+    this.addRibbonIcon("network", "Open PAVi graph", () => {
       void this.openNeuralGraph();
     });
     this.addCommand({
       id: "open-neural-graph",
-      name: "Open PARA Second Brain Viz graph",
+      name: "Open PAVi graph",
       callback: () => {
         void this.openNeuralGraph();
       }
     });
     this.addCommand({
       id: "open",
-      name: "Open PARA Second Brain Viz metrics lab",
+      name: "Open PAVi metrics lab",
       callback: () => {
         void this.openObservatory();
       }
     });
     this.addCommand({
       id: "refresh",
-      name: "Refresh PARA Second Brain Viz data",
+      name: "Refresh PAVi data",
       callback: () => {
         void this.refreshObservatoryViews(true);
       }
@@ -159,8 +159,8 @@ export default class LlmWikiObservatoryPlugin extends Plugin implements Observat
       ]);
       if (views.length === 0 && !hasGraph && openWhenMissing) await this.openObservatory();
     } catch (error) {
-      console.error("PARA Second Brain Viz refresh failed", error);
-      new Notice(`PARA Second Brain Viz refresh failed: ${errorMessage(error)}`);
+      console.error("PAVi refresh failed", error);
+      new Notice(`PAVi refresh failed: ${errorMessage(error)}`);
     }
   }
 
@@ -218,16 +218,16 @@ export default class LlmWikiObservatoryPlugin extends Plugin implements Observat
         missingTelemetryArchives: missingArchives.map((item) => item.path)
       }
     };
-    console.info("PARA Second Brain Viz profile validation", report);
+    console.info("PAVi profile validation", report);
     if (issueCount === 0 && resolved.warnings.length === 0) {
       new Notice(
-        `PARA Second Brain Viz profile ready: ${rootChecks.length} roots, ${rootChecks.reduce((sum, root) => sum + root.indexCount, 0)} indexes, ${spineChecks.length} spine notes, ${telemetryChecks.length} active telemetry source(s).`,
+        `PAVi profile ready: ${rootChecks.length} roots, ${rootChecks.reduce((sum, root) => sum + root.indexCount, 0)} indexes, ${spineChecks.length} spine notes, ${telemetryChecks.length} active telemetry source(s).`,
         8_000
       );
       return;
     }
     new Notice(
-      `PARA Second Brain Viz profile needs attention: ${missingRoots.length} missing root(s), ${unindexedRoots.length} root(s) without an index, ${missingSpines.length} missing spine note(s), ${missingTelemetry.length} missing telemetry source(s). See developer console.`,
+      `PAVi profile needs attention: ${missingRoots.length} missing root(s), ${unindexedRoots.length} root(s) without an index, ${missingSpines.length} missing spine note(s), ${missingTelemetry.length} missing telemetry source(s). See developer console.`,
       10_000
     );
   }
@@ -289,10 +289,10 @@ export default class LlmWikiObservatoryPlugin extends Plugin implements Observat
     try {
       const result = await this.graphEnhancer.open();
       new Notice(
-        `PARA Second Brain Viz ready: ${result.matchedNodes}/${result.totalNodes} notes structured, ${result.queryTracks} query and ${result.constructionTracks} build paths.`
+        `PAVi ready: ${result.matchedNodes}/${result.totalNodes} notes structured, ${result.queryTracks} query and ${result.constructionTracks} build paths.`
       );
     } catch (error) {
-      new Notice(`PARA Second Brain Viz unavailable: ${errorMessage(error)}`);
+      new Notice(`PAVi unavailable: ${errorMessage(error)}`);
     }
   }
 
@@ -308,14 +308,14 @@ export default class LlmWikiObservatoryPlugin extends Plugin implements Observat
     if (views[0]) {
       const captured = await views[0].captureSnapshot();
       new Notice(captured
-        ? "PARA Second Brain Viz snapshot captured."
-        : "PARA Second Brain Viz snapshot capture failed. See the view status for details.");
+        ? "PAVi snapshot captured."
+        : "PAVi snapshot capture failed. See the view status for details.");
       return;
     }
 
     try {
       const result = await this.dataService.captureSnapshot();
-      new Notice(`PARA Second Brain Viz snapshot captured: ${result.path}`);
+      new Notice(`PAVi snapshot captured: ${result.path}`);
     } catch (error) {
       new Notice(`Snapshot capture failed: ${errorMessage(error)}`);
     }
@@ -324,7 +324,7 @@ export default class LlmWikiObservatoryPlugin extends Plugin implements Observat
   private async logAvailabilityReport(): Promise<void> {
     try {
       const report = await this.getAvailabilityReport();
-      console.info("PARA Second Brain Viz availability", report);
+      console.info("PAVi availability", report);
       new Notice(
         `Lens availability: ${report.summary.ready} ready, ${report.summary.partial} partial, ${report.summary.unavailable} unavailable. See developer console.`
       );

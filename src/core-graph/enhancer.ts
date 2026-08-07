@@ -170,7 +170,7 @@ export class NeuralGraphEnhancer {
         throw new Error("PARA Second Brain Viz enhancer has been unloaded.");
       }
       this.sessions.set(leaf, session);
-      loading.update(100, "PARA Second Brain Viz ready", `${session.summary().matchedNodes.toLocaleString()} notes structured`);
+      loading.update(100, "PAVi ready", `${session.summary().matchedNodes.toLocaleString()} notes structured`);
       await new Promise<void>((resolve) => requestAnimationFrame(() => requestAnimationFrame(() => resolve())));
       loading.destroy();
       return session.summary();
@@ -336,7 +336,7 @@ class NeuralGraphSession {
     onProgress(84, "Building semantic layout", `${this.model.nodes.length.toLocaleString()} notes · PARA and first-folder territories`);
     this.matchedNodes = this.bridge.applyStructuredLayout(this.model);
     this.scheduleAnchorStabilization();
-    onProgress(94, "Rendering PARA Second Brain Viz layers", `${this.matchedNodes.toLocaleString()}/${this.model.nodes.length.toLocaleString()} native nodes matched`);
+    onProgress(94, "Rendering PAVi layers", `${this.matchedNodes.toLocaleString()}/${this.model.nodes.length.toLocaleString()} native nodes matched`);
     this.buildToolbar();
     this.buildQueryInspector();
     if (typeof ResizeObserver !== "undefined") {
@@ -389,10 +389,11 @@ class NeuralGraphSession {
 
     const toolbar = document.createElement("section");
     toolbar.className = "llmwo-graph-toolbar";
-    toolbar.setAttribute("aria-label", "PARA Second Brain Viz controls");
+    toolbar.setAttribute("aria-label", "PAVi · PARA Second Brain Viz controls");
     const brand = document.createElement("div");
     brand.className = "llmwo-graph-brand";
-    brand.textContent = "PARA Second Brain Viz";
+    brand.textContent = "PAVi";
+    brand.title = "PARA Second Brain Viz";
 
     const mode = selectControl(document, "View", [
       ["activity", "Activity map"],
@@ -2811,7 +2812,7 @@ function createNeuralGraphLoadingOverlay(content: HTMLElement): NeuralGraphLoadi
   const eyebrow = document.createElement("span");
   eyebrow.textContent = "OBSIDIAN · PARA GRAPH";
   const title = document.createElement("strong");
-  title.textContent = "Building PARA Second Brain Viz";
+  title.textContent = "PAVi is mapping your vault";
   const label = document.createElement("p");
   const track = document.createElement("div");
   const bar = document.createElement("i");
@@ -2837,7 +2838,7 @@ function createNeuralGraphLoadingOverlay(content: HTMLElement): NeuralGraphLoadi
     },
     fail(nextLabel) {
       overlay.classList.add("is-error");
-      title.textContent = "PARA Second Brain Viz unavailable";
+      title.textContent = "PAVi unavailable";
       label.textContent = nextLabel;
       detail.textContent = "The native Graph View remains available.";
       value.textContent = "Stopped";

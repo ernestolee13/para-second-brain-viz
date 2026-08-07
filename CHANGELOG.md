@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.5
+
+- Added **PAVi (파비)** as the friendly shorthand for PARA Second Brain Viz and defined it as PARA Analytics & Visualization.
+- Added an original neural-firefly mascot and PAVi-led bilingual README thumbnails while preserving the real Activity, Query Replay, and Ingest Replay captures.
+- Applied PAVi to frequent graph, metrics, settings, command, loading, and notice surfaces while retaining the full manifest name for discovery.
+
 ## 0.2.4
 
 - Renamed the product and repository to **PARA Second Brain Viz** so it cannot be mistaken for a knowledge-base builder.

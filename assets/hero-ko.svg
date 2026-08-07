@@ -10,9 +10,12 @@
   <g opacity=".16" stroke="#8b93a8" fill="none"><circle cx="800" cy="350" r="470"/><circle cx="800" cy="350" r="360"/><circle cx="800" cy="350" r="250"/><path d="M0 760C290 640 410 850 720 710S1190 590 1600 760"/></g>
   <g font-family="Inter,-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Noto Sans KR',sans-serif">
     <g transform="translate(56 52)"><rect width="230" height="40" rx="20" fill="#171a26" stroke="#7c6af2" stroke-opacity=".7"/><circle cx="22" cy="20" r="6" fill="#7c6af2"/><circle cx="38" cy="20" r="6" fill="#62b6ff"/><circle cx="54" cy="20" r="6" fill="#3ed6a0"/><text x="72" y="26" fill="#d8d9e7" font-size="16" font-weight="700" letter-spacing="1.2">OBSIDIAN · PARA</text></g>
-    <text x="800" y="168" text-anchor="middle" fill="#f7f7fb" font-size="72" font-weight="800" letter-spacing="-2">PARA SECOND BRAIN VIZ</text>
-    <rect x="440" y="202" width="720" height="4" rx="2" fill="url(#line)"/>
-    <text x="800" y="255" text-anchor="middle" fill="#b8bccd" font-size="25" font-weight="500">기존 PARA 볼트와 기록된 조회·구축 활동을 시각화·분석</text>
+    <circle cx="1380" cy="165" r="155" fill="#7c6af2" fill-opacity=".08" stroke="#62b6ff" stroke-opacity=".16"/>
+    <image href="pavi-mascot.png" x="1195" y="-12" width="360" height="360" preserveAspectRatio="xMidYMid meet"/>
+    <text x="800" y="106" text-anchor="middle" fill="#aeb3c6" font-size="18" font-weight="750" letter-spacing="3">PARA SECOND BRAIN VIZ</text>
+    <text x="800" y="196" text-anchor="middle" fill="#f7f7fb" font-size="104" font-weight="820" letter-spacing="-3">PAVi</text>
+    <rect x="560" y="218" width="480" height="4" rx="2" fill="url(#line)"/>
+    <text x="800" y="266" text-anchor="middle" fill="#b8bccd" font-size="23" font-weight="500">기존 PARA 볼트와 기록된 조회·구축 활동을 시각화·분석</text>
     <g filter="url(#shadow)">
       <rect x="48" y="332" width="480" height="300" rx="24" fill="#11141d" stroke="#62b6ff" stroke-opacity=".45"/><image href="activity-map.png" x="48" y="332" width="480" height="300" preserveAspectRatio="xMidYMid slice" clip-path="url(#a)"/><rect x="48" y="568" width="480" height="64" fill="#0c1018" fill-opacity=".9" clip-path="url(#a)"/><text x="74" y="607" fill="#f4f5f8" font-size="23" font-weight="750">활성화와 성장</text>
       <rect x="560" y="332" width="480" height="300" rx="24" fill="#11141d" stroke="#e8c95d" stroke-opacity=".45"/><image href="query-replay.png" x="560" y="332" width="480" height="300" preserveAspectRatio="xMidYMid slice" clip-path="url(#q)"/><rect x="560" y="568" width="480" height="64" fill="#0c1018" fill-opacity=".9" clip-path="url(#q)"/><text x="586" y="607" fill="#f4f5f8" font-size="23" font-weight="750">검색 리플레이</text>

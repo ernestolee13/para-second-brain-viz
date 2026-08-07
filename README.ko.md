@@ -1,10 +1,18 @@
-# PARA Second Brain Viz
+# PARA Second Brain Viz (PAVi · 파비)
 
 [English](README.md) | [한국어](README.ko.md)
 
-![PARA Second Brain Viz — 활성화, 검색 리플레이, 구축 리플레이](assets/hero-ko.png)
+![파비 — PARA Second Brain Viz](assets/hero-ko.png)
 
-PARA Second Brain Viz는 이미 존재하는 PARA vault와 Knowledge Base 도구가 남긴 개인정보 비포함 조회·구축 로그를 시각화·분석하는 Obsidian 플러그인입니다. 세컨드 브레인을 만들거나 문서를 구축·조회하는 도구가 아니라, 현재 구조와 사용 흔적을 그래프로 관찰하고 개선 지점을 찾는 도구입니다.
+PARA Second Brain Viz—애칭 **PAVi(파비)**—는 이미 존재하는 PARA vault와 Knowledge Base 도구가 남긴 개인정보 비포함 조회·구축 로그를 시각화·분석하는 Obsidian 플러그인입니다. 세컨드 브레인을 만들거나 문서를 구축·조회하는 도구가 아니라, 현재 구조와 사용 흔적을 그래프로 관찰하고 개선 지점을 찾는 도구입니다.
+
+PAVi는 **PARA Analytics & Visualization**의 줄임말입니다. 보라·파랑·민트 활성 노드가 빛나는 작은 신경 반딧불을 마스코트로 사용합니다. manifest와 문서에는 명확한 정식명을 유지하고, 그래프 UI와 데모에서는 친근한 이름인 파비를 사용합니다.
+
+<p align="center">
+  <img src="assets/pavi-avatar.png" width="260" alt="파비 신경 반딧불 마스코트와 정사각형 썸네일">
+</p>
+
+게시물·데모·저장소 카드에 바로 쓸 수 있는 정사각형 [PAVi 썸네일](assets/pavi-avatar.png)을 함께 제공합니다.
 
 그래프의 연결 관계를 새로 만드는 도구가 아닙니다. Obsidian Core Graph를 열고, 설정된 범위와 배치를 적용하고, 기본 노드를 의미 있는 위치에 고정한 다음 분석 레이어와 애니메이션을 그 위에 표시합니다.
 
