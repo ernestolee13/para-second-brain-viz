@@ -1,14 +1,14 @@
 {
-  "name": "llm-wiki-observatory",
-  "version": "0.2.2",
+  "name": "para-second-brain",
+  "version": "0.2.3",
   "private": true,
-  "description": "Interactive Obsidian Second Brain graph for PARA activation, recall paths, structural change, and LLM wiki cost.",
+  "description": "Interactive Obsidian PARA Second Brain graph for activation, recall paths, structural change, and LLM wiki cost.",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ernestolee13/llm-wiki-observatory.git"
+    "url": "https://github.com/ernestolee13/para-second-brain.git"
   },
-  "homepage": "https://github.com/ernestolee13/llm-wiki-observatory",
+  "homepage": "https://github.com/ernestolee13/para-second-brain",
   "type": "module",
   "engines": {
     "node": ">=20"

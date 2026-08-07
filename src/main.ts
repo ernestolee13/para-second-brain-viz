@@ -85,26 +85,26 @@ export default class LlmWikiObservatoryPlugin extends Plugin implements Observat
       (leaf: WorkspaceLeaf) => new ObservatoryItemView(leaf, this.services)
     );
 
-    this.addRibbonIcon("network", "Open Second Brain", () => {
+    this.addRibbonIcon("network", "Open PARA Second Brain", () => {
       void this.openNeuralGraph();
     });
     this.addCommand({
       id: "open-neural-graph",
-      name: "Open Second Brain graph",
+      name: "Open PARA Second Brain graph",
       callback: () => {
         void this.openNeuralGraph();
       }
     });
     this.addCommand({
       id: "open",
-      name: "Open Second Brain metrics lab",
+      name: "Open PARA Second Brain metrics lab",
       callback: () => {
         void this.openObservatory();
       }
     });
     this.addCommand({
       id: "refresh",
-      name: "Refresh Second Brain data",
+      name: "Refresh PARA Second Brain data",
       callback: () => {
         void this.refreshObservatoryViews(true);
       }
@@ -159,8 +159,8 @@ export default class LlmWikiObservatoryPlugin extends Plugin implements Observat
       ]);
       if (views.length === 0 && !hasGraph && openWhenMissing) await this.openObservatory();
     } catch (error) {
-      console.error("Second Brain refresh failed", error);
-      new Notice(`Second Brain refresh failed: ${errorMessage(error)}`);
+      console.error("PARA Second Brain refresh failed", error);
+      new Notice(`PARA Second Brain refresh failed: ${errorMessage(error)}`);
     }
   }
 
@@ -218,16 +218,16 @@ export default class LlmWikiObservatoryPlugin extends Plugin implements Observat
         missingTelemetryArchives: missingArchives.map((item) => item.path)
       }
     };
-    console.info("Second Brain profile validation", report);
+    console.info("PARA Second Brain profile validation", report);
     if (issueCount === 0 && resolved.warnings.length === 0) {
       new Notice(
-        `Second Brain profile ready: ${rootChecks.length} roots, ${rootChecks.reduce((sum, root) => sum + root.indexCount, 0)} indexes, ${spineChecks.length} spine notes, ${telemetryChecks.length} active telemetry source(s).`,
+        `PARA Second Brain profile ready: ${rootChecks.length} roots, ${rootChecks.reduce((sum, root) => sum + root.indexCount, 0)} indexes, ${spineChecks.length} spine notes, ${telemetryChecks.length} active telemetry source(s).`,
         8_000
       );
       return;
     }
     new Notice(
-      `Second Brain profile needs attention: ${missingRoots.length} missing root(s), ${unindexedRoots.length} root(s) without an index, ${missingSpines.length} missing spine note(s), ${missingTelemetry.length} missing telemetry source(s). See developer console.`,
+      `PARA Second Brain profile needs attention: ${missingRoots.length} missing root(s), ${unindexedRoots.length} root(s) without an index, ${missingSpines.length} missing spine note(s), ${missingTelemetry.length} missing telemetry source(s). See developer console.`,
       10_000
     );
   }
@@ -289,10 +289,10 @@ export default class LlmWikiObservatoryPlugin extends Plugin implements Observat
     try {
       const result = await this.graphEnhancer.open();
       new Notice(
-        `Second Brain ready: ${result.matchedNodes}/${result.totalNodes} notes structured, ${result.queryTracks} query and ${result.constructionTracks} build paths.`
+        `PARA Second Brain ready: ${result.matchedNodes}/${result.totalNodes} notes structured, ${result.queryTracks} query and ${result.constructionTracks} build paths.`
       );
     } catch (error) {
-      new Notice(`Second Brain unavailable: ${errorMessage(error)}`);
+      new Notice(`PARA Second Brain unavailable: ${errorMessage(error)}`);
     }
   }
 
@@ -308,14 +308,14 @@ export default class LlmWikiObservatoryPlugin extends Plugin implements Observat
     if (views[0]) {
       const captured = await views[0].captureSnapshot();
       new Notice(captured
-        ? "Second Brain snapshot captured."
-        : "Second Brain snapshot capture failed. See the view status for details.");
+        ? "PARA Second Brain snapshot captured."
+        : "PARA Second Brain snapshot capture failed. See the view status for details.");
       return;
     }
 
     try {
       const result = await this.dataService.captureSnapshot();
-      new Notice(`Second Brain snapshot captured: ${result.path}`);
+      new Notice(`PARA Second Brain snapshot captured: ${result.path}`);
     } catch (error) {
       new Notice(`Snapshot capture failed: ${errorMessage(error)}`);
     }
@@ -324,7 +324,7 @@ export default class LlmWikiObservatoryPlugin extends Plugin implements Observat
   private async logAvailabilityReport(): Promise<void> {
     try {
       const report = await this.getAvailabilityReport();
-      console.info("Second Brain availability", report);
+      console.info("PARA Second Brain availability", report);
       new Notice(
         `Lens availability: ${report.summary.ready} ready, ${report.summary.partial} partial, ${report.summary.unavailable} unavailable. See developer console.`
       );

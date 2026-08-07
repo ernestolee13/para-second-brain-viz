@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.3
+
+- Renamed the product to **PARA Second Brain** and the public repository to `para-second-brain` so the PARA visualization focus is visible at a glance.
+- Added an explicit compatibility section: PARA Knowledge Base is an auto-configured companion, not a required runtime dependency.
+- Clarified which structural features remain available when no query/build telemetry is configured.
+
 ## 0.2.2
 
 - Prepared Second Brain as an independent public Obsidian plugin repository with MIT licensing and release links.

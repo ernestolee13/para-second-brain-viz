@@ -110,7 +110,7 @@ export class NeuralGraphEnhancer {
   ) {}
 
   async open(): Promise<NeuralGraphOpenResult> {
-    if (this.destroyed) throw new Error("Second Brain enhancer has been unloaded.");
+    if (this.destroyed) throw new Error("PARA Second Brain enhancer has been unloaded.");
     this.prune();
     const existing = [...this.sessions.entries()][0];
     if (existing) {
@@ -149,7 +149,7 @@ export class NeuralGraphEnhancer {
       if (!bridgeResult.ok) throw new Error(bridgeResult.reason);
       if (this.destroyed) {
         bridgeResult.bridge.destroy();
-        throw new Error("Second Brain enhancer has been unloaded.");
+        throw new Error("PARA Second Brain enhancer has been unloaded.");
       }
       loading.update(66, "Curating graph scope", "Applying vault exclusions and semantic rules");
       const session = new NeuralGraphSession(
@@ -167,10 +167,10 @@ export class NeuralGraphEnhancer {
       }
       if (this.destroyed) {
         session.destroy();
-        throw new Error("Second Brain enhancer has been unloaded.");
+        throw new Error("PARA Second Brain enhancer has been unloaded.");
       }
       this.sessions.set(leaf, session);
-      loading.update(100, "Second Brain ready", `${session.summary().matchedNodes.toLocaleString()} notes structured`);
+      loading.update(100, "PARA Second Brain ready", `${session.summary().matchedNodes.toLocaleString()} notes structured`);
       await new Promise<void>((resolve) => requestAnimationFrame(() => requestAnimationFrame(() => resolve())));
       loading.destroy();
       return session.summary();
@@ -317,7 +317,7 @@ class NeuralGraphSession {
   async attach(onProgress: (progress: number, label: string, detail?: string) => void = () => undefined): Promise<void> {
     this.canvas = this.bridge.createOverlayCanvas();
     this.context = this.canvas.getContext("2d");
-    if (!this.context) throw new Error("Second Brain overlay requires a 2d canvas context.");
+    if (!this.context) throw new Error("PARA Second Brain overlay requires a 2d canvas context.");
     const document = this.canvas.ownerDocument;
     document.addEventListener("visibilitychange", this.handleVisibilityChange);
     this.reducedMotionMedia = document.defaultView?.matchMedia("(prefers-reduced-motion: reduce)") ?? null;
@@ -330,13 +330,13 @@ class NeuralGraphSession {
       const detail = scope.remainingExclusions.length > 0
         ? ` Excluded paths still visible: ${scope.remainingExclusions.join(", ")}.`
         : " Core Graph filtering did not settle before the safety timeout.";
-      throw new Error(`Second Brain stopped before layout to preserve its curated scope.${detail}`);
+      throw new Error(`PARA Second Brain stopped before layout to preserve its curated scope.${detail}`);
     }
     if (this.destroyed) return;
     onProgress(84, "Building semantic layout", `${this.model.nodes.length.toLocaleString()} notes · PARA and first-folder territories`);
     this.matchedNodes = this.bridge.applyStructuredLayout(this.model);
     this.scheduleAnchorStabilization();
-    onProgress(94, "Rendering Second Brain layers", `${this.matchedNodes.toLocaleString()}/${this.model.nodes.length.toLocaleString()} native nodes matched`);
+    onProgress(94, "Rendering PARA Second Brain layers", `${this.matchedNodes.toLocaleString()}/${this.model.nodes.length.toLocaleString()} native nodes matched`);
     this.buildToolbar();
     this.buildQueryInspector();
     if (typeof ResizeObserver !== "undefined") {
@@ -389,10 +389,10 @@ class NeuralGraphSession {
 
     const toolbar = document.createElement("section");
     toolbar.className = "llmwo-graph-toolbar";
-    toolbar.setAttribute("aria-label", "LLM Wiki Second Brain controls");
+    toolbar.setAttribute("aria-label", "PARA Second Brain controls");
     const brand = document.createElement("div");
     brand.className = "llmwo-graph-brand";
-    brand.textContent = "Second Brain";
+    brand.textContent = "PARA Second Brain";
 
     const mode = selectControl(document, "View", [
       ["activity", "Activity map"],
@@ -886,7 +886,7 @@ class NeuralGraphSession {
       const detail = scope.remainingExclusions.length > 0
         ? ` Excluded paths still visible: ${scope.remainingExclusions.join(", ")}.`
         : " Core Graph filtering did not settle before the safety timeout.";
-      throw new Error(`Second Brain refresh stopped before layout.${detail}`);
+      throw new Error(`PARA Second Brain refresh stopped before layout.${detail}`);
     }
     this.dataset = next.dataset;
     this.model = buildStructuredGraph(next.dataset, this.settings);
@@ -2809,9 +2809,9 @@ function createNeuralGraphLoadingOverlay(content: HTMLElement): NeuralGraphLoadi
   overlay.setAttribute("aria-valuemax", "100");
   const plate = document.createElement("section");
   const eyebrow = document.createElement("span");
-  eyebrow.textContent = "LLM WIKI OBSERVATORY";
+  eyebrow.textContent = "OBSIDIAN · PARA GRAPH";
   const title = document.createElement("strong");
-  title.textContent = "Building Second Brain";
+  title.textContent = "Building PARA Second Brain";
   const label = document.createElement("p");
   const track = document.createElement("div");
   const bar = document.createElement("i");
@@ -2837,7 +2837,7 @@ function createNeuralGraphLoadingOverlay(content: HTMLElement): NeuralGraphLoadi
     },
     fail(nextLabel) {
       overlay.classList.add("is-error");
-      title.textContent = "Second Brain unavailable";
+      title.textContent = "PARA Second Brain unavailable";
       label.textContent = nextLabel;
       detail.textContent = "The native Graph View remains available.";
       value.textContent = "Stopped";

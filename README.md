@@ -1,10 +1,22 @@
-# Second Brain
+# PARA Second Brain
 
-Second Brain enhances Obsidian's native graph with a stable PARA layout, semantic index and spine nodes, activity and growth views, query replay, ingest replay, knowledge-health filters, and evidence-aware metrics.
+[English](README.md) | [한국어](README.ko.md)
+
+![PARA Second Brain — Activity, Query Replay, and Ingest Replay](assets/hero-en.png)
+
+PARA Second Brain enhances Obsidian's native graph with a stable PARA layout, semantic index and spine nodes, activity and growth views, query replay, ingest replay, knowledge-health filters, and evidence-aware metrics.
 
 The plugin auto-detects the portable **PARA Knowledge Base v1** contract when a vault contains `.para-kb/config.json`. LLM wiki PARA, standard PARA, and fully custom profiles remain available for independent and legacy setups.
 
-Second Brain is an independent, read-only consumer of the [PARA Knowledge Base](https://github.com/ernestolee13/para-knowledge-base) interoperability contract. It does not embed or import the producer plugin: the only integration boundary is the versioned vault config and privacy-safe JSONL telemetry format.
+PARA Second Brain is an independent, read-only consumer of the [PARA Knowledge Base](https://github.com/ernestolee13/para-knowledge-base) interoperability contract. It does not embed or import the producer plugin: the only integration boundary is the versioned vault config and privacy-safe JSONL telemetry format.
+
+## Compatibility
+
+PARA Knowledge Base is the recommended companion, not a dependency.
+
+- **Used together:** Auto mode reads `.para-kb/config.json`, discovers the same PARA roots and indexes, and replays privacy-safe query/build telemetry without duplicate setup.
+- **Used standalone:** Choose the numbered LLM wiki PARA profile, standard PARA profile, or fully custom roots, index names, spine notes, exclusions, and telemetry mappings. Claude Code, Codex, and PARA Knowledge Base are not required.
+- **Used without telemetry:** Structure, PARA territories, indexes, activity, growth, snapshots, and knowledge-health views still work. Only query and ingest replay metrics that require logs remain unavailable.
 
 ## What it adds
 
@@ -16,22 +28,44 @@ Second Brain is an independent, read-only consumer of the [PARA Knowledge Base](
 - Manual graph snapshots for structural growth comparisons
 - Local profile validation for roots, indexes, spine notes, and telemetry sources
 
-Second Brain does not replace Obsidian's graph data. It opens the native Core Graph, applies a curated scope, anchors matching native nodes, and draws its analytical layers above it.
+PARA Second Brain does not replace Obsidian's graph data. It opens the native Core Graph, applies a curated scope, anchors matching native nodes, and draws its analytical layers above it.
+
+## Visual tour
+
+### Activity and growth
+
+![Activity and growth map](assets/activity-map.png)
+
+Replay note creation across a selected period while keeping the PARA territories, index hubs, and semantic core stable. New nodes and structural edges appear in time order, making growth direction and neglected areas visible without turning the graph into a random force layout.
+
+### Query replay
+
+![Concurrent query replay](assets/query-replay.png)
+
+Replay a time window or recent operation count as concurrent, duration-weighted traces. The graph shows which PARA areas and documents were reached; the inspector exposes each operation's recorded latency, tokens, inspected documents, and path while aggregate metrics summarize the current selection.
+
+### Ingest replay
+
+![Ingest replay from capture to placement](assets/ingest-replay.png)
+
+Follow captured or directly requested knowledge through guides and indexes into its final PARA placement. The same view can expose quick settlements, cross-area evidence, link creation, and ambiguous placements that take multiple steps to resolve.
 
 ## Installation
 
 ### Manual installation
 
-1. Download `manifest.json`, `main.js`, and `styles.css` from the [latest release](https://github.com/ernestolee13/llm-wiki-observatory/releases/latest).
+1. Download `manifest.json`, `main.js`, and `styles.css` from the [latest release](https://github.com/ernestolee13/para-second-brain/releases/latest).
 2. Create `<vault-config>/plugins/llm-wiki-observatory/` in your vault.
 3. Copy the three files into that folder.
-4. Reload Obsidian and enable **Second Brain** under Community plugins.
+4. Reload Obsidian and enable **PARA Second Brain** under Community plugins.
 
 The vault config directory is commonly `.obsidian`, but the plugin uses Obsidian's configured directory at runtime rather than assuming that name.
 
+The installation directory remains `llm-wiki-observatory` for upgrade compatibility with prototype installs. The public product and repository name is **PARA Second Brain**.
+
 ## Configuration
 
-Open **Settings → Community plugins → Second Brain**.
+Open **Settings → Community plugins → PARA Second Brain**.
 
 ### Vault profiles
 
@@ -65,9 +99,9 @@ The parser intentionally discards prompt text, query text, note bodies, and unkn
 
 ## Commands
 
-- **Open Second Brain graph**
-- **Open Second Brain metrics lab**
-- **Refresh Second Brain data**
+- **Open PARA Second Brain graph**
+- **Open PARA Second Brain metrics lab**
+- **Refresh PARA Second Brain data**
 - **Capture vault snapshot**
 - **Validate vault profile**
 - **Log lens availability report**
@@ -88,7 +122,7 @@ npm run check
 npm run package:release
 ```
 
-The release package is written to `release/second-brain-<version>/` and contains the three Obsidian assets plus SHA-256 checksums. Update the package version with `npm version <version>`; the version hook synchronizes `manifest.json` and `versions.json`.
+The release package is written to `release/para-second-brain-<version>/` and contains the three Obsidian assets plus SHA-256 checksums. Update the package version with `npm version <version>`; the version hook synchronizes `manifest.json` and `versions.json`.
 
 ## Release notes
 

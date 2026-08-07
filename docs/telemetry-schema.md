@@ -1,6 +1,6 @@
 # Telemetry schema
 
-Second Brain reads newline-delimited JSON and normalizes supported records into query or build journeys. It never stores the original record after parsing.
+PARA Second Brain reads newline-delimited JSON and normalizes supported records into query or build journeys. It never stores the original record after parsing.
 
 ## Canonical events
 

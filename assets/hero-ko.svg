@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#080b12"/><stop offset=".55" stop-color="#10121b"/><stop offset="1" stop-color="#091513"/></linearGradient>
+    <radialGradient id="glow" cx="50%" cy="35%" r="65%"><stop offset="0" stop-color="#7c6af2" stop-opacity=".28"/><stop offset=".5" stop-color="#3ed6a0" stop-opacity=".08"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+    <linearGradient id="line"><stop stop-color="#7c6af2"/><stop offset=".5" stop-color="#62b6ff"/><stop offset="1" stop-color="#3ed6a0"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#000" flood-opacity=".58"/></filter>
+    <clipPath id="a"><rect x="48" y="332" width="480" height="300" rx="24"/></clipPath><clipPath id="q"><rect x="560" y="332" width="480" height="300" rx="24"/></clipPath><clipPath id="i"><rect x="1072" y="332" width="480" height="300" rx="24"/></clipPath>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/><rect width="1600" height="900" fill="url(#glow)"/>
+  <g opacity=".16" stroke="#8b93a8" fill="none"><circle cx="800" cy="350" r="470"/><circle cx="800" cy="350" r="360"/><circle cx="800" cy="350" r="250"/><path d="M0 760C290 640 410 850 720 710S1190 590 1600 760"/></g>
+  <g font-family="Inter,-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+    <g transform="translate(56 52)"><rect width="230" height="40" rx="20" fill="#171a26" stroke="#7c6af2" stroke-opacity=".7"/><circle cx="22" cy="20" r="6" fill="#7c6af2"/><circle cx="38" cy="20" r="6" fill="#62b6ff"/><circle cx="54" cy="20" r="6" fill="#3ed6a0"/><text x="72" y="26" fill="#d8d9e7" font-size="16" font-weight="700" letter-spacing="1.2">OBSIDIAN · PARA</text></g>
+    <text x="800" y="168" text-anchor="middle" fill="#f7f7fb" font-size="78" font-weight="800" letter-spacing="-2">PARA SECOND BRAIN</text>
+    <rect x="475" y="202" width="650" height="4" rx="2" fill="url(#line)"/>
+    <text x="800" y="255" text-anchor="middle" fill="#b8bccd" font-size="25" font-weight="500">활성화·조회·구축·성장·지식 건강을 하나의 구조화된 그래프로</text>
+    <g filter="url(#shadow)">
+      <rect x="48" y="332" width="480" height="300" rx="24" fill="#11141d" stroke="#62b6ff" stroke-opacity=".45"/><image href="activity-map.png" x="48" y="332" width="480" height="300" preserveAspectRatio="xMidYMid slice" clip-path="url(#a)"/><rect x="48" y="568" width="480" height="64" fill="#0c1018" fill-opacity=".9" clip-path="url(#a)"/><text x="74" y="607" fill="#f4f5f8" font-size="23" font-weight="750">활성화와 성장</text>
+      <rect x="560" y="332" width="480" height="300" rx="24" fill="#11141d" stroke="#e8c95d" stroke-opacity=".45"/><image href="query-replay.png" x="560" y="332" width="480" height="300" preserveAspectRatio="xMidYMid slice" clip-path="url(#q)"/><rect x="560" y="568" width="480" height="64" fill="#0c1018" fill-opacity=".9" clip-path="url(#q)"/><text x="586" y="607" fill="#f4f5f8" font-size="23" font-weight="750">검색 리플레이</text>
+      <rect x="1072" y="332" width="480" height="300" rx="24" fill="#11141d" stroke="#3ed6a0" stroke-opacity=".5"/><image href="ingest-replay.png" x="1072" y="332" width="480" height="300" preserveAspectRatio="xMidYMid slice" clip-path="url(#i)"/><rect x="1072" y="568" width="480" height="64" fill="#0c1018" fill-opacity=".9" clip-path="url(#i)"/><text x="1098" y="607" fill="#f4f5f8" font-size="23" font-weight="750">구축 리플레이</text>
+    </g>
+    <g transform="translate(241 706)" font-size="18" font-weight="650"><rect width="300" height="54" rx="27" fill="#151925" stroke="#7c6af2" stroke-opacity=".55"/><text x="150" y="34" text-anchor="middle" fill="#d8d9e7">기본 그래프 위 분석 레이어</text><rect x="329" width="300" height="54" rx="27" fill="#151925" stroke="#62b6ff" stroke-opacity=".55"/><text x="479" y="34" text-anchor="middle" fill="#d8d9e7">PARA 구조 인식</text><rect x="658" width="300" height="54" rx="27" fill="#151925" stroke="#3ed6a0" stroke-opacity=".55"/><text x="808" y="34" text-anchor="middle" fill="#d8d9e7">로컬 우선 텔레메트리</text></g>
+    <text x="800" y="835" text-anchor="middle" fill="#747a8f" font-size="17" letter-spacing="1.2">PARA KNOWLEDGE BASE와 자동 연계 · 단독 사용도 가능</text>
+  </g>
+</svg>
