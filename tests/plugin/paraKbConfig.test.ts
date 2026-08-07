@@ -8,7 +8,7 @@ import {
 import type { ObservatoryAdapter, ObservatoryAdapterList } from "../../src/obsidian/types";
 
 describe("PARA Knowledge Base config", () => {
-  it("maps a portable config into an ephemeral PARA Second Brain profile", async () => {
+  it("maps a portable config into an ephemeral PARA Second Brain Viz profile", async () => {
     const adapter = new MemoryAdapter({ [PARA_KB_CONFIG_PATH]: configJson() });
     const persisted = { ...DEFAULT_SETTINGS, configSource: "auto" as const };
     const resolved = await resolveParaKbSettings(adapter, persisted);

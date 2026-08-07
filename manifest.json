@@ -1,9 +1,9 @@
 {
   "id": "llm-wiki-observatory",
-  "name": "PARA Second Brain",
-  "version": "0.2.3",
+  "name": "PARA Second Brain Viz",
+  "version": "0.2.4",
   "minAppVersion": "1.12.0",
-  "description": "A structured PARA graph for recall, ingest, growth, health, and LLM wiki telemetry.",
+  "description": "Visual analytics for existing PARA vault structure and privacy-safe query/build telemetry.",
   "author": "ErnestoLee",
   "authorUrl": "https://github.com/ernestolee13",
   "isDesktopOnly": true

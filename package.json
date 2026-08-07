@@ -1,14 +1,14 @@
 {
-  "name": "para-second-brain",
-  "version": "0.2.3",
+  "name": "para-second-brain-viz",
+  "version": "0.2.4",
   "private": true,
-  "description": "Interactive Obsidian PARA Second Brain graph for activation, recall paths, structural change, and LLM wiki cost.",
+  "description": "Obsidian visual analytics for existing PARA vault structure and privacy-safe query/build telemetry.",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ernestolee13/para-second-brain.git"
+    "url": "https://github.com/ernestolee13/para-second-brain-viz.git"
   },
-  "homepage": "https://github.com/ernestolee13/para-second-brain",
+  "homepage": "https://github.com/ernestolee13/para-second-brain-viz",
   "type": "module",
   "engines": {
     "node": ">=20"

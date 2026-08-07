@@ -13,7 +13,7 @@ if (versions[manifest.version] !== manifest.minAppVersion) {
 }
 
 const assets = ["manifest.json", "main.js", "styles.css"];
-const target = join("release", `para-second-brain-${manifest.version}`);
+const target = join("release", `para-second-brain-viz-${manifest.version}`);
 await rm(target, { recursive: true, force: true });
 await mkdir(target, { recursive: true });
 

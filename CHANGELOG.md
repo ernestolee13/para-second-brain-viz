@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.4
+
+- Renamed the product and repository to **PARA Second Brain Viz** so it cannot be mistaken for a knowledge-base builder.
+- Rewrote the opening description to define the plugin as read-only visual analytics for an existing PARA vault and optional query/build telemetry.
+- Updated UI labels, release packaging, bilingual documentation, and key visuals to use the explicit visualization identity.
+
 ## 0.2.3
 
 - Renamed the product to **PARA Second Brain** and the public repository to `para-second-brain` so the PARA visualization focus is visible at a glance.

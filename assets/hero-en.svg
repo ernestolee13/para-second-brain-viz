@@ -32,9 +32,9 @@
       <circle cx="22" cy="20" r="6" fill="#7c6af2"/><circle cx="38" cy="20" r="6" fill="#62b6ff"/><circle cx="54" cy="20" r="6" fill="#3ed6a0"/>
       <text x="72" y="26" fill="#d8d9e7" font-size="16" font-weight="700" letter-spacing="1.2">OBSIDIAN · PARA</text>
     </g>
-    <text x="800" y="168" text-anchor="middle" fill="#f7f7fb" font-size="78" font-weight="800" letter-spacing="-2">PARA SECOND BRAIN</text>
-    <rect x="475" y="202" width="650" height="4" rx="2" fill="url(#line)"/>
-    <text x="800" y="255" text-anchor="middle" fill="#b8bccd" font-size="25" font-weight="500">A structured graph for activation, recall, ingest, growth, and knowledge health</text>
+    <text x="800" y="168" text-anchor="middle" fill="#f7f7fb" font-size="72" font-weight="800" letter-spacing="-2">PARA SECOND BRAIN VIZ</text>
+    <rect x="440" y="202" width="720" height="4" rx="2" fill="url(#line)"/>
+    <text x="800" y="255" text-anchor="middle" fill="#b8bccd" font-size="25" font-weight="500">Visual analytics for existing PARA vaults and logged query/build activity</text>
 
     <g filter="url(#shadow)">
       <rect x="48" y="332" width="480" height="300" rx="24" fill="#11141d" stroke="#62b6ff" stroke-opacity=".45"/>

@@ -168,7 +168,7 @@ describe("CoreGraphBridge", () => {
     });
   });
 
-  it("deduplicates concurrent PARA Second Brain opens while scope attachment is pending", async () => {
+  it("deduplicates concurrent PARA Second Brain Viz opens while scope attachment is pending", async () => {
     const enhancer = new NeuralGraphEnhancer({
       workspace: { getLeavesOfType: () => [] }
     } as never, {

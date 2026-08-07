@@ -1,10 +1,10 @@
-# PARA Second Brain
+# PARA Second Brain Viz
 
 [English](README.md) | [한국어](README.ko.md)
 
-![PARA Second Brain — 활성화, 검색 리플레이, 구축 리플레이](assets/hero-ko.png)
+![PARA Second Brain Viz — 활성화, 검색 리플레이, 구축 리플레이](assets/hero-ko.png)
 
-PARA Second Brain은 Obsidian 기본 그래프 위에 PARA 구조, 인덱스와 척수 노드, 활동·성장 변화, 검색 리플레이, 구축 리플레이, 지식 건강 필터와 운영 메트릭을 덧붙이는 데스크톱 플러그인입니다.
+PARA Second Brain Viz는 이미 존재하는 PARA vault와 Knowledge Base 도구가 남긴 개인정보 비포함 조회·구축 로그를 시각화·분석하는 Obsidian 플러그인입니다. 세컨드 브레인을 만들거나 문서를 구축·조회하는 도구가 아니라, 현재 구조와 사용 흔적을 그래프로 관찰하고 개선 지점을 찾는 도구입니다.
 
 그래프의 연결 관계를 새로 만드는 도구가 아닙니다. Obsidian Core Graph를 열고, 설정된 범위와 배치를 적용하고, 기본 노드를 의미 있는 위치에 고정한 다음 분석 레이어와 애니메이션을 그 위에 표시합니다.
 
@@ -50,16 +50,16 @@ Inbox 또는 직접 요청에서 시작한 지식이 가이드와 인덱스를 �
 
 ## 설치
 
-1. [최신 릴리스](https://github.com/ernestolee13/para-second-brain/releases/latest)에서 `manifest.json`, `main.js`, `styles.css`를 받습니다.
+1. [최신 릴리스](https://github.com/ernestolee13/para-second-brain-viz/releases/latest)에서 `manifest.json`, `main.js`, `styles.css`를 받습니다.
 2. vault 설정 폴더 아래에 `plugins/llm-wiki-observatory/`를 만듭니다.
 3. 세 파일을 해당 폴더에 복사합니다.
-4. Obsidian을 다시 로드하고 커뮤니티 플러그인에서 **PARA Second Brain**을 활성화합니다.
+4. Obsidian을 다시 로드하고 커뮤니티 플러그인에서 **PARA Second Brain Viz**를 활성화합니다.
 
-설치 폴더 ID `llm-wiki-observatory`는 기존 프로토타입 설치와 설정을 이어받기 위해 유지합니다. 사용자에게 표시되는 제품명과 공개 저장소명은 **PARA Second Brain**입니다.
+설치 폴더 ID `llm-wiki-observatory`는 기존 프로토타입 설치와 설정을 이어받기 위해 유지합니다. 사용자에게 표시되는 제품명과 공개 저장소명은 **PARA Second Brain Viz**입니다.
 
 ## 설정
 
-**설정 → 커뮤니티 플러그인 → PARA Second Brain**에서 다음 소스를 선택할 수 있습니다.
+**설정 → 커뮤니티 플러그인 → PARA Second Brain Viz**에서 다음 소스를 선택할 수 있습니다.
 
 - **PARA Knowledge Base v1:** `.para-kb/config.json`을 읽어 구조와 로그 위치를 자동 매핑합니다.
 - **LLM wiki PARA:** `0. Common`, 번호형 PARA 루트, Inbox, `index.md`/`_index.md` 규칙을 사용합니다.
@@ -78,4 +78,4 @@ npm run check
 npm run package:release
 ```
 
-릴리스 패키지는 `release/para-second-brain-<version>/`에 생성됩니다. MIT License로 배포됩니다.
+릴리스 패키지는 `release/para-second-brain-viz-<version>/`에 생성됩니다. MIT License로 배포됩니다.

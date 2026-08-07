@@ -1,14 +1,14 @@
-# PARA Second Brain
+# PARA Second Brain Viz
 
 [English](README.md) | [한국어](README.ko.md)
 
-![PARA Second Brain — Activity, Query Replay, and Ingest Replay](assets/hero-en.png)
+![PARA Second Brain Viz — Activity, Query Replay, and Ingest Replay](assets/hero-en.png)
 
-PARA Second Brain enhances Obsidian's native graph with a stable PARA layout, semantic index and spine nodes, activity and growth views, query replay, ingest replay, knowledge-health filters, and evidence-aware metrics.
+PARA Second Brain Viz is an Obsidian visual analytics plugin for an existing PARA vault: it maps the vault's current structure and, when knowledge-base tools such as PARA Knowledge Base provide privacy-safe query/build logs, turns them into replay, cost, reach, growth, and health insights. It does **not** build, rewrite, or query the knowledge base itself.
 
 The plugin auto-detects the portable **PARA Knowledge Base v1** contract when a vault contains `.para-kb/config.json`. LLM wiki PARA, standard PARA, and fully custom profiles remain available for independent and legacy setups.
 
-PARA Second Brain is an independent, read-only consumer of the [PARA Knowledge Base](https://github.com/ernestolee13/para-knowledge-base) interoperability contract. It does not embed or import the producer plugin: the only integration boundary is the versioned vault config and privacy-safe JSONL telemetry format.
+PARA Second Brain Viz is an independent, read-only consumer of the [PARA Knowledge Base](https://github.com/ernestolee13/para-knowledge-base) interoperability contract. It does not embed or import the producer plugin: the only integration boundary is the versioned vault config and privacy-safe JSONL telemetry format.
 
 ## Compatibility
 
@@ -28,7 +28,7 @@ PARA Knowledge Base is the recommended companion, not a dependency.
 - Manual graph snapshots for structural growth comparisons
 - Local profile validation for roots, indexes, spine notes, and telemetry sources
 
-PARA Second Brain does not replace Obsidian's graph data. It opens the native Core Graph, applies a curated scope, anchors matching native nodes, and draws its analytical layers above it.
+PARA Second Brain Viz does not replace Obsidian's graph data. It opens the native Core Graph, applies a curated scope, anchors matching native nodes, and draws its analytical layers above it.
 
 ## Visual tour
 
@@ -54,18 +54,18 @@ Follow captured or directly requested knowledge through guides and indexes into 
 
 ### Manual installation
 
-1. Download `manifest.json`, `main.js`, and `styles.css` from the [latest release](https://github.com/ernestolee13/para-second-brain/releases/latest).
+1. Download `manifest.json`, `main.js`, and `styles.css` from the [latest release](https://github.com/ernestolee13/para-second-brain-viz/releases/latest).
 2. Create `<vault-config>/plugins/llm-wiki-observatory/` in your vault.
 3. Copy the three files into that folder.
-4. Reload Obsidian and enable **PARA Second Brain** under Community plugins.
+4. Reload Obsidian and enable **PARA Second Brain Viz** under Community plugins.
 
 The vault config directory is commonly `.obsidian`, but the plugin uses Obsidian's configured directory at runtime rather than assuming that name.
 
-The installation directory remains `llm-wiki-observatory` for upgrade compatibility with prototype installs. The public product and repository name is **PARA Second Brain**.
+The installation directory remains `llm-wiki-observatory` for upgrade compatibility with prototype installs. The public product and repository name is **PARA Second Brain Viz**.
 
 ## Configuration
 
-Open **Settings → Community plugins → PARA Second Brain**.
+Open **Settings → Community plugins → PARA Second Brain Viz**.
 
 ### Vault profiles
 
@@ -99,9 +99,9 @@ The parser intentionally discards prompt text, query text, note bodies, and unkn
 
 ## Commands
 
-- **Open PARA Second Brain graph**
-- **Open PARA Second Brain metrics lab**
-- **Refresh PARA Second Brain data**
+- **Open PARA Second Brain Viz graph**
+- **Open PARA Second Brain Viz metrics lab**
+- **Refresh PARA Second Brain Viz data**
 - **Capture vault snapshot**
 - **Validate vault profile**
 - **Log lens availability report**
@@ -122,7 +122,7 @@ npm run check
 npm run package:release
 ```
 
-The release package is written to `release/para-second-brain-<version>/` and contains the three Obsidian assets plus SHA-256 checksums. Update the package version with `npm version <version>`; the version hook synchronizes `manifest.json` and `versions.json`.
+The release package is written to `release/para-second-brain-viz-<version>/` and contains the three Obsidian assets plus SHA-256 checksums. Update the package version with `npm version <version>`; the version hook synchronizes `manifest.json` and `versions.json`.
 
 ## Release notes
 
