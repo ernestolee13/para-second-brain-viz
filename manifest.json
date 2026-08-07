@@ -1,0 +1,10 @@
+{
+  "id": "llm-wiki-observatory",
+  "name": "Second Brain",
+  "version": "0.2.2",
+  "minAppVersion": "1.12.0",
+  "description": "A structured PARA graph for recall, ingest, growth, health, and LLM wiki telemetry.",
+  "author": "ErnestoLee",
+  "authorUrl": "https://github.com/ernestolee13",
+  "isDesktopOnly": true
+}

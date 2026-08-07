@@ -1,0 +1,26 @@
+# Changelog
+
+## 0.2.2
+
+- Prepared Second Brain as an independent public Obsidian plugin repository with MIT licensing and release links.
+- Clarified that PARA Knowledge Base integration uses the versioned `.para-kb/config.json` and JSONL contract rather than shared runtime code.
+- Removed vault-specific default exclusions and project names from public source and fixtures; private paths remain configurable per vault.
+
+## 0.2.1
+
+- Added read-only `.para-kb/config.json` auto-detection with Auto/Profile/Manual precedence.
+- Added the `para-kb-v1` vault and telemetry profiles, canonical `OperationStep`, and `request_id` grouping with legacy aliases.
+- Added future schema warnings and cross-project synthetic fixture contract tests.
+- Kept prompt, query/answer text, note bodies, unknown payloads, and absolute paths outside normalized replay data.
+
+## 0.2.0
+
+- Added LLM wiki PARA, standard PARA, and custom vault profiles.
+- Added LLM wiki, generic JSONL, and custom telemetry mappings with nested field aliases.
+- Resolved config and plugin paths through `$CONFIG_DIR` and `$PLUGIN_DIR` tokens.
+- Added in-app profile validation and live refresh of enhanced Core Graph sessions.
+- Added standard Obsidian release metadata, documentation, packaging, checksums, and release automation.
+
+## 0.1.0
+
+- Initial Second Brain graph, metrics lab, replay, growth, health, and audit prototype.

@@ -1,0 +1,32 @@
+{
+  "name": "llm-wiki-observatory",
+  "version": "0.2.2",
+  "private": true,
+  "description": "Interactive Obsidian Second Brain graph for PARA activation, recall paths, structural change, and LLM wiki cost.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ernestolee13/llm-wiki-observatory.git"
+  },
+  "homepage": "https://github.com/ernestolee13/llm-wiki-observatory",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "node esbuild.config.mjs --production",
+    "dev": "node esbuild.config.mjs --watch",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "check": "npm run typecheck && npm test && npm run build",
+    "package:release": "npm run check && node scripts/package-release.mjs",
+    "version": "node version-bump.mjs",
+    "audit:runtime": "npm audit --omit=dev"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.1",
+    "obsidian": "^1.12.2",
+    "typescript": "^5.5.4",
+    "vitest": "^4.1.10"
+  }
+}
