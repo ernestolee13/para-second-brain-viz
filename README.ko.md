@@ -18,7 +18,7 @@ PAVi는 **PARA Analytics & Visualization**의 줄임말입니다. 보라·파랑
 
 ## 호환성과 독립 사용
 
-[PARA Knowledge Base](https://github.com/ernestolee13/para-knowledge-base)는 권장 연계 플러그인이지만 필수 의존성은 아닙니다.
+[PARA Knowledge Base](https://github.com/ernestolee13/para-knowledge-base)는 권장 연계 플러그인이지만 필수 의존성은 아닙니다. 그 위키가 잘 구축되고 효율적으로 쓰이는지 진단하려면 [llm-wiki-diagnostics](https://github.com/ernestolee13/llm-wiki-diagnostics)가 진단 쪽 동반 도구입니다 — PAVi가 그림으로 보여주고, 진단 플레이북이 같은 개인정보 비포함 텔레메트리를 건강 리포트로 바꿉니다.
 
 - **함께 사용할 때:** `.para-kb/config.json`에서 PARA 루트, 인덱스, 척수 문서, 제외 경로와 텔레메트리 위치를 자동으로 읽습니다. `kb-query`와 `kb-ingest`가 남긴 개인정보 비포함 JSONL을 별도 설정 없이 리플레이할 수 있습니다.
 - **단독으로 사용할 때:** 번호형 LLM wiki PARA, 표준 PARA, 완전 사용자 정의 프로필 중 하나를 선택할 수 있습니다. Claude Code, Codex, PARA Knowledge Base 없이도 동작합니다.

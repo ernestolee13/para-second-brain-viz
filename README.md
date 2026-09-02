@@ -20,7 +20,7 @@ PARA Second Brain Viz is an independent, read-only consumer of the [PARA Knowled
 
 ## Compatibility
 
-PARA Knowledge Base is the recommended companion, not a dependency.
+PARA Knowledge Base is the recommended companion, not a dependency. For diagnosing whether that wiki is well-built and efficiently used, [llm-wiki-diagnostics](https://github.com/ernestolee13/llm-wiki-diagnostics) is the agent-neutral companion on the diagnostics side — PAVi shows the picture, the diagnostics playbooks turn the same privacy-safe telemetry into a health report.
 
 - **Used together:** Auto mode reads `.para-kb/config.json`, discovers the same PARA roots and indexes, and replays privacy-safe query/build telemetry without duplicate setup.
 - **Used standalone:** Choose the numbered LLM wiki PARA profile, standard PARA profile, or fully custom roots, index names, spine notes, exclusions, and telemetry mappings. Claude Code, Codex, and PARA Knowledge Base are not required.
