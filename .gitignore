@@ -4,7 +4,7 @@ coverage/
 main.js
 release/
 data.json
-snapshots/
+/snapshots/
 .DS_Store
 *.log
 .env
